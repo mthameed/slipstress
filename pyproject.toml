@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slipstress-free"
+version = "1.0.0"
+description = "SlipStress (Free) -- slippage-stress test your own backtested trades."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE.md"]
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+]
+
+[project.scripts]
+slipstress-free = "slipstress.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["slipstress*"]
